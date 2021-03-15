@@ -1,0 +1,7 @@
+name: 'add to playlist'
+description: 'this module is for add to play list botton'
+core: 8.x
+type: module
+package: custom
+libraries:
+  - pfizergo_addPlaylist/addPlaylist_js

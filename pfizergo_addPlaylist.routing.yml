@@ -1,0 +1,47 @@
+pfizergo_addPlaylist.content:
+  path: '/retrive_playlist'
+  defaults:
+    _controller: '\Drupal\pfizergo_addPlaylist\Controller\AddPlaylist::index'
+    _title: 'Get Playlist'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
+
+pfizergo_addPlaylist.update:
+  path: '/video/{video_id}'
+  defaults:
+    _controller: '\Drupal\pfizergo_addPlaylist\Controller\AddPlaylist::updatePlaylist'
+    _title: 'Update Playlist'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+
+pfizergo_addPlaylist.add:
+  path: '/video/{name}/{id}'
+  defaults:
+    _controller: '\Drupal\pfizergo_addPlaylist\Controller\AddPlaylist::addPlaylist'
+    _title: 'Add Playlist'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
+
+pfizergo_addPlaylist.remove:
+  path: '/user/playlist/delete'
+  defaults:
+    _controller: '\Drupal\pfizergo_addPlaylist\Controller\AddPlaylist::removePlaylist'
+    _title: 'Add Playlist'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
+
+pfizergo_addPlaylist.removeVideo:
+  path: '/playlist/{playlistId}/remove/{videoId}'
+  defaults:
+    _controller: '\Drupal\pfizergo_addPlaylist\Controller\AddPlaylist::removeVideo'
+    _title: 'remove video'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'

@@ -1,0 +1,8 @@
+addPlaylist_js:
+  js:
+    js/addPlaylist.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupal.ajax
+    - core/jquery
+    - core/drupalSettings
